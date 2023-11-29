@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/banner_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/llButtons"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/font"
+                android:padding="5dp"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/enter_a_text"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="@color/accentColor3"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/stroke_small_accent" />
+
+                <EditText
+                    android:id="@+id/etTextMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#003DB739"
+                    android:fontFamily="@font/font"
+                    android:hint="@string/enter_a_text"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#B2000000"
+                    android:textColorHint="#9E9C9C"
+                    android:textSize="18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font"
+                android:layout_marginBottom="3dp"
+                android:layout_marginHorizontal="8dp"
+                android:paddingHorizontal="5dp"
+                android:text="@string/text_enter_repetition_limit"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="6dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="@color/accentColor3"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/stroke_small_accent" />
+
+                    <EditText
+                        android:id="@+id/etTextRepeateNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:backgroundTint="#003DB739"
+                        android:fontFamily="@font/font"
+                        android:hint="@string/repeat_number"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="#B2000000"
+                        android:textColorHint="#9E9C9C"
+                        android:textSize="18sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/font"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/text_limit_note"
+                    android:textColor="@color/gnt_red" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:elevation="1dp"
+                    android:background="@drawable/apk_light_green_box"
+                    android:orientation="horizontal"
+                    android:paddingVertical="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/font"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="13dp"
+                        android:text="@string/text_new_line_on"
+                        android:textColor="@color/green"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchNewLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="5dp"
+                        android:textColorHint="@color/green" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnRepeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/font"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:text="@string/text_repeat"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etTextRepeates"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:fontFamily="@font/font"
+                android:layout_marginHorizontal="8dp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="16dp"
+                android:background="@drawable/apk_edit_text_background"
+                android:elevation="1dp"
+                android:inputType="textMultiLine"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:paddingHorizontal="15dp"
+                android:fontFamily="@font/font"
+                android:text="@string/text_copy"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/font"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:paddingHorizontal="15dp"
+                android:text="@string/text_clear"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/font"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:paddingHorizontal="15dp"
+                android:text="@string/text_share"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/banner_bg">
+
+        <RelativeLayout
+            android:id="@+id/bannerAd"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+</RelativeLayout>
